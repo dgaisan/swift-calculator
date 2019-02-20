@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad () {
         super.viewDidLoad()
+        self.canvas.text = model.value
     }
 
     @IBAction func operandPressed (operand: UIButton) {
@@ -34,7 +35,7 @@ class ViewController: UIViewController {
     
     @IBAction func restartPressed () {
         model.drop()
-        self.canvas.text = ""
+        self.canvas.text = model.value
     }
 
     @IBAction func resultPressed () {

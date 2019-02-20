@@ -13,7 +13,7 @@ class CalculatorImpl: Calculator {
         leftReady = false
         leftOperand = 0
         rightOperand = 0
-        val = ""
+        val = "0"
     }
  
     func processDigit (digit: Int) {
@@ -55,10 +55,10 @@ class CalculatorImpl: Calculator {
     
     func drop () {
         cleanUpState()
-        val = ""
+        val = "0"
     }
     
     var value: String {
-        return "\(self.val)"
+        return self.val
     }
 }

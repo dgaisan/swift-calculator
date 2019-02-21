@@ -4,7 +4,6 @@
 //
 //  Created by Dmitri Gaisan on 2/6/19.
 //  Copyright © 2019 Dmitri Gaisan. All rights reserved.
-//
 
 import UIKit
 
@@ -30,6 +29,11 @@ class ViewController: UIViewController {
 
     @IBAction func minusOpPressed () {
         model.processOperator(value: .minus)
+        self.canvas.text = model.value
+    }
+    
+    @IBAction func multiplyPressed () {
+        model.processOperator(value: .multiply)
         self.canvas.text = model.value
     }
     
